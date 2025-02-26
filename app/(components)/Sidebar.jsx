@@ -1,19 +1,61 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState("users");
 
   const menuItems = [
-    { id: "dashboard", icon: "grid", label: "Dashboard" },
-    { id: "orders", icon: "shopping-bag", label: "Orders", highlight: true },
-    { id: "wallet", icon: "wallet", label: "Wallet" },
-    { id: "menu", icon: "book-open", label: "Menu" },
-    { id: "support", icon: "headphones", label: "Support" },
-    { id: "users", icon: "users", label: "User / Staff" },
-    { id: "log", icon: "eye", label: "Customers Log" },
-    { id: "settings", icon: "settings", label: "Setting" },
+    {
+      id: "dashboard",
+      icon: "grid",
+      label: "Dashboard",
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
+    {
+      id: "orders",
+      icon: "shopping-bag",
+      label: "Orders",
+      highlight: true,
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
+    {
+      id: "wallet",
+      icon: "wallet",
+      label: "Wallet",
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
+    {
+      id: "menu",
+      icon: "book-open",
+      label: "Menu",
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
+    {
+      id: "support",
+      icon: "headphones",
+      label: "Support",
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
+    {
+      id: "users",
+      icon: "users",
+      label: "User / Staff",
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
+    {
+      id: "log",
+      icon: "eye",
+      label: "Customers Log",
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
+    {
+      id: "settings",
+      icon: "settings",
+      label: "Setting",
+      src: "https://cdn-icons-png.flaticon.com/128/482/482541.png",
+    },
   ];
 
   const bottomItems = [
@@ -54,6 +96,7 @@ const Sidebar = () => {
                   }
                 `}
                 onClick={() => setActiveItem(item.id)}>
+                
                 <span className="text-center w-6 mr-3">
                   <i data-feather={item.icon} className="w-5 h-5" />
                 </span>
